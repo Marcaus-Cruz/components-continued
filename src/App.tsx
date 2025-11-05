@@ -1,7 +1,13 @@
+import Input from "./components/Input";
 import "./index.css";
 
 function App() {
-  return <h1>Let's goo</h1>;
+  return (
+    <main>
+      <Input id="name" label="Your name:" />
+      <Input id="age" label="Your age:" />
+    </main>
+  );
 }
 
 export default App;
