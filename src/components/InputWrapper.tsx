@@ -1,10 +1,10 @@
-type InputProps = {
+type InputWrapperProps = {
   id: string;
   label: string;
   type?: string;
 };
 
-export default function Input({ id, label, type = "text" }: InputProps) {
+export default function InputWrapper({ id, label, type = "text" }: InputWrapperProps) {
   return (
     <p>
       <label htmlFor={id}>{label}</label>

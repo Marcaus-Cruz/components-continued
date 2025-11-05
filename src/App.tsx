@@ -1,11 +1,11 @@
-import Input from "./components/Input";
+import InputWrapper from "./components/InputWrapper";
 import "./index.css";
 
 function App() {
   return (
     <main>
-      <Input id="name" label="Your name:" />
-      <Input id="age" label="Your age:" />
+      <InputWrapper id="name" label="Your name:" />
+      <InputWrapper id="age" label="Your age:" />
     </main>
   );
 }
