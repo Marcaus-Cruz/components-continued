@@ -5,7 +5,7 @@ function App() {
   return (
     <main>
       <InputWrapper id="name" label="Your name:" />
-      <InputWrapper id="age" label="Your age:" />
+      <InputWrapper id="age" label="Your age:" type="number" />
     </main>
   );
 }
