@@ -1,4 +1,5 @@
 import type { ComponentPropsWithoutRef } from "react";
+import { forwardRef } from "react";
 
 type InputWrapperProps = {
   id: string;
@@ -6,16 +7,18 @@ type InputWrapperProps = {
   type?: string;
 } & ComponentPropsWithoutRef<"input">;
 
-export default function InputWrapper({
-  id,
-  label,
-  type = "text",
-  ...props
-}: InputWrapperProps) {
-  return (
-    <p>
-      <label htmlFor={id}>{label}</label>
-      <input id={id} type={type} {...props} />
-    </p>
-  );
-}
+const InputWrapper = forwardRef<HTMLInputElement, InputWrapperProps>(
+  function InputWrapper(
+    { id, label, type = "text", ...props }: InputWrapperProps,
+    ref
+  ) {
+    return (
+      <p>
+        <label htmlFor={id}>{label}</label>
+        <input id={id} type={type} {...props} ref={ref} />
+      </p>
+    );
+  }
+);
+
+export default InputWrapper;
